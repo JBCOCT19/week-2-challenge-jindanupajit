@@ -1,5 +1,4 @@
 
-import javax.swing.*;
 import java.util.*;
 
 public class ChipotleApplication {
@@ -58,7 +57,7 @@ public class ChipotleApplication {
     private static Float pricePerIngredient = 0.50f;
 
     private static HashMap<Integer,ArrayList<Integer>> Ingredient = new HashMap<>();
-    private static HashMap<Integer,ArrayList<Integer>> Burrito = new HashMap<>();
+    private static HashMap<Integer,ArrayList<Integer>> AllBurrito = new HashMap<>();
 
     private static Random rand = new Random();
 
@@ -66,11 +65,13 @@ public class ChipotleApplication {
         init();
         for (int burritoNumber = 1; burritoNumber <= 25; burritoNumber++) {
 
-            Burrito.put(burritoNumber, getBurrito(new ArrayList<>()));
-            System.out.printf("Burrito %d: %s\n", burritoNumber, getBurritoAsString(Burrito.get(burritoNumber)));
+            AllBurrito.put(burritoNumber, getBurrito(new ArrayList<>()));
+            System.out.printf("Burrito %d: %s\n", burritoNumber, getBurritoAsString(AllBurrito.get(burritoNumber)));
+
 
         }
-
+        System.out.println("----!----1----!----2----!----3----!----4----!----5");
+        System.out.println("\n"+stringWrapper((String.format("This order has %s", getSummrize(AllBurrito))), 50));
 
 
     }
@@ -112,6 +113,65 @@ public class ChipotleApplication {
 
 
         return sb.substring(2);
+    }
+
+    public static String getSummrize(HashMap<Integer,ArrayList<Integer>> AllBurrito) {
+        HashMap<Integer,Integer> ingredientCounter = new HashMap<>();
+        int allIngredientCounter = 0;
+        int allBurritoCounter = AllBurrito.size();
+        for (ArrayList<Integer> burrito : AllBurrito.values()) {
+
+            for (Integer ingredient : burrito) {
+                if ((ingredient % 10) == 0) continue;
+                ++allIngredientCounter;
+                if (ingredientCounter.containsKey(ingredient)) {
+                    ingredientCounter.replace(ingredient, 1+ingredientCounter.get(ingredient));
+                }
+                else {
+                    ingredientCounter.put(ingredient,1);
+                }
+
+            }
+        }
+
+        ArrayList<Integer> allIngredient = new ArrayList(ingredientCounter.keySet());
+
+        Collections.sort(allIngredient);
+
+        StringBuilder sb = new StringBuilder();
+
+        for (Integer ingredient : allIngredient) {
+            sb.append(String.format(", %d %s",ingredientCounter.get(ingredient),getIngredientAsString(ingredient)));
+            switch(ingredient) {
+
+                case VEGGIES:   sb.append("(as meat option)");
+                                break;
+            }
+        }
+
+        sb.append(String.format(", and the sum is $%.2f",(pricePerIngredient*allIngredientCounter) + (pricePerBurrito*allBurritoCounter)));
+        return sb.substring(2);
+
+
+    }
+
+    public static String stringWrapper(String s, int size) {
+        StringBuilder sb = new StringBuilder();
+        ArrayList<String> AllTokens = new ArrayList<String>(Arrays.asList(s.split(" ")));
+        StringBuilder l = new StringBuilder();
+        for (String token : AllTokens) {
+            //System.err.printf("%s, l = %d, t = %d\n", token, l.length(), token.length());
+            if (size < (l.length()+token.length()+1) )  {
+                l.append("\n");
+                sb.append(l.substring(1));
+                l = new StringBuilder();
+            }
+            l.append(" ").append(token);
+
+        }
+        sb.append(l.substring(1));
+        return sb.toString();
+
     }
 
     public static String getIngredientAsString(int ingredient) {
@@ -215,6 +275,7 @@ public class ChipotleApplication {
     public static int r(int bound) {
         return rand.nextInt(Integer.MAX_VALUE)%bound;
     }
+
     public static ArrayList<Integer> getBurrito(ArrayList<Integer> burrito) {
         int ingredient;
         ArrayList<Integer> requiredCategory = getRequiredCategory(new ArrayList<Integer>(),(5+r(5)));
