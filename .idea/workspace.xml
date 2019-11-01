@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42bbb861-b167-4b47-aafb-b0cb3ddf0670" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OCT21-JAVA-Challenge2-Chipotle/ChipotleApplication$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OCT21-JAVA-Challenge2-Chipotle/ChipotleApplication$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OCT21-JAVA-Challenge2-Chipotle/ChipotleApplication$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OCT21-JAVA-Challenge2-Chipotle/ChipotleApplication$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OCT21-JAVA-Challenge2-Chipotle/ChipotleApplication$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OCT21-JAVA-Challenge2-Chipotle/ChipotleApplication$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OCT21-JAVA-Challenge2-Chipotle/ChipotleApplication$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OCT21-JAVA-Challenge2-Chipotle/ChipotleApplication$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OCT21-JAVA-Challenge2-Chipotle/ChipotleApplication$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OCT21-JAVA-Challenge2-Chipotle/ChipotleApplication$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OCT21-JAVA-Challenge2-Chipotle/ChipotleApplication$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OCT21-JAVA-Challenge2-Chipotle/ChipotleApplication$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OCT21-JAVA-Challenge2-Chipotle/ChipotleApplication$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OCT21-JAVA-Challenge2-Chipotle/ChipotleApplication$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OCT21-JAVA-Challenge2-Chipotle/ChipotleApplication$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OCT21-JAVA-Challenge2-Chipotle/ChipotleApplication$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OCT21-JAVA-Challenge2-Chipotle/ChipotleApplication$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OCT21-JAVA-Challenge2-Chipotle/ChipotleApplication$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OCT21-JAVA-Challenge2-Chipotle/ChipotleApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OCT21-JAVA-Challenge2-Chipotle/ChipotleApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ChipotleApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChipotleApplication.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -75,7 +64,8 @@
       <option name="presentableId" value="Default" />
       <updated>1572527363584</updated>
       <workItem from="1572527376924" duration="15081000" />
-      <workItem from="1572543555612" duration="3706000" />
+      <workItem from="1572543555612" duration="4238000" />
+      <workItem from="1572613832320" duration="835000" />
     </task>
     <servers />
   </component>
@@ -87,7 +77,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

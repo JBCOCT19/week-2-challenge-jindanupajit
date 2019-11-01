@@ -71,6 +71,7 @@ public class ChipotleApplication {
 
         }
         System.out.println("----!----1----!----2----!----3----!----4----!----5");
+        System.out.println(stringWrapper("123 567 90 2345 7890123456 890 2345678901 34567890 234567 90 2345 7890123456 890 2345678901 34567890123",50));
         System.out.println("\n"+stringWrapper((String.format("This order has %s", getSummrize(AllBurrito))), 50));
 
 
@@ -161,7 +162,7 @@ public class ChipotleApplication {
         StringBuilder l = new StringBuilder();
         for (String token : AllTokens) {
             //System.err.printf("%s, l = %d, t = %d\n", token, l.length(), token.length());
-            if (size < (l.length()+token.length()+1) )  {
+            if (size < (l.length()+token.length()) )  {
                 l.append("\n");
                 sb.append(l.substring(1));
                 l = new StringBuilder();
